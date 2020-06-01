@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "kebenjuzhifuzhifu-tvOS.app"
-               BlueprintName = "kebenjuzhifuzhifu-tvOS"
-               ReferencedContainer = "container:kebenjuzhifuzhifu.xcodeproj">
+               BuildableName = "kebenjuzhifu-tvOS.app"
+               BlueprintName = "kebenjuzhifu-tvOS"
+               ReferencedContainer = "container:kebenjuzhifu.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "kebenjuzhifuzhifu-tvOSTests.xctest"
-               BlueprintName = "kebenjuzhifuzhifu-tvOSTests"
-               ReferencedContainer = "container:kebenjuzhifuzhifu.xcodeproj">
+               BuildableName = "kebenjuzhifu-tvOSTests.xctest"
+               BlueprintName = "kebenjuzhifu-tvOSTests"
+               ReferencedContainer = "container:kebenjuzhifu.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "kebenjuzhifuzhifu-tvOS.app"
-            BlueprintName = "kebenjuzhifuzhifu-tvOS"
-            ReferencedContainer = "container:kebenjuzhifuzhifu.xcodeproj">
+            BuildableName = "kebenjuzhifu-tvOS.app"
+            BlueprintName = "kebenjuzhifu-tvOS"
+            ReferencedContainer = "container:kebenjuzhifu.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "kebenjuzhifuzhifu-tvOS.app"
-            BlueprintName = "kebenjuzhifuzhifu-tvOS"
-            ReferencedContainer = "container:kebenjuzhifuzhifu.xcodeproj">
+            BuildableName = "kebenjuzhifu-tvOS.app"
+            BlueprintName = "kebenjuzhifu-tvOS"
+            ReferencedContainer = "container:kebenjuzhifu.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

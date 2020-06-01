@@ -26,19 +26,20 @@ import * as WeChat from 'react-native-wechat';//首先导入react-native-wechat
 import axios from 'axios';
 import RNFetchBlob from 'rn-fetch-blob'
 import Spinner from 'react-native-loading-spinner-overlay';
+import AudioRecorderPlayer from 'react-native-audio-recorder-player';
+const audioRecorderPlayer = new AudioRecorderPlayer();
 
 
 // const REQUEST_URL = 'https://kebenju.localhost.com';
 // const REQUEST_URL = 'https://192.168.2.4/';
 // const REQUEST_URL = 'https://kebenju.hulalaedu.com/';
-// const REQUEST_URL = 'https://xijukecheng.pagekite.me/';
 const REQUEST_URL = 'https://xijvkecheng.hulalaedu.com/';
 const WECHAT_APPID = 'wxb7532c0995b93389';
 const WECHAT_APPSECRET = '68778f76077595d000faa01672970fbd';
 
 export default class MainScreen extends Component {
-  constructor(props) {
-    super(props);
+constructor(props) {
+	super(props);
 	this.state = {
 		spinner: false,
 		loadingText: 'Loading...'
@@ -49,14 +50,19 @@ export default class MainScreen extends Component {
 	this.weixinPayment = this.weixinPayment.bind(this);
 	this.showReferencePdf = this.showReferencePdf.bind(this);
 	this.downloadFileFromUrl = this.downloadFileFromUrl.bind(this);
-  }
+	this.audioRecordStart = this.audioRecordStart.bind(this);
+	this.audioRecordStop = this.audioRecordStop.bind(this);
+	this.audioPlayStart = this.audioPlayStart.bind(this);
+	this.audioPlayPause = this.audioPlayPause.bind(this);
+	this.audioPlayStop = this.audioPlayStop.bind(this);
+}
 
 	async componentDidMount() {
 		Orientation.lockToLandscape();
 		if( Platform.OS === 'android' ){
 			this.requestPermissionAndroid()
 		} else if( Platform.OS === 'ios' ){
-			this.requestPermissionIOS()
+			this.requestPermissionIOS() 
 		}
 		
 		var regStatus = await WeChat.registerApp(WECHAT_APPID);
@@ -108,6 +114,60 @@ export default class MainScreen extends Component {
 	}
 
 
+	requestPermissionIOS() {
+		checkMultiple([
+			PERMISSIONS.IOS.CAMERA, 
+			PERMISSIONS.IOS.MICROPHONE, 
+			PERMISSIONS.IOS.MEDIA_LIBRARY,
+			PERMISSIONS.IOS.PHOTO_LIBRARY
+		]).then(
+			async (statuses) => {
+				if( statuses[PERMISSIONS.IOS.CAMERA] == RESULTS.DENIED ){
+					await request(PERMISSIONS.IOS.CAMERA).then(
+						(statuses) => {
+							console.log('-- Camera', statuses[PPERMISSIONS.IOS.CAMERA]);
+						},
+					);
+				}
+
+				if( statuses[PERMISSIONS.IOS.MICROPHONE] == RESULTS.DENIED ){
+					await request(PERMISSIONS.IOS.MICROPHONE).then(
+						(statuses) => {
+							console.log('-- RecordAudio', statuses[PERMISSIONS.IOS.MICROPHONE]);
+						},
+					);
+				}
+
+				if( statuses[PERMISSIONS.IOS.MEDIA_LIBRARY] == RESULTS.DENIED ){
+					await request(PERMISSIONS.IOS.MEDIA_LIBRARY).then(
+						(statuses) => {
+							console.log('-- MediaLibrary', statuses[PERMISSIONS.IOS.MEDIA_LIBRARY]);
+						},
+					);
+				}
+
+				if( statuses[PERMISSIONS.IOS.PHOTO_LIBRARY] == RESULTS.DENIED ){
+					await request(PERMISSIONS.IOS.PHOTO_LIBRARY).then(
+						(statuses) => {
+							console.log('-- PhotoLibrary', statuses[PERMISSIONS.IOS.PHOTO_LIBRARY]);
+						},
+					);
+				}
+
+				if( statuses[PERMISSIONS.IOS.CAMERA] == RESULTS.BLOCKED || 
+					statuses[PERMISSIONS.IOS.MICROPHONE] == RESULTS.BLOCKED || 
+					statuses[PERMISSIONS.IOS.MEDIA_LIBRARY] == RESULTS.BLOCKED || 
+					statuses[PPERMISSIONS.IOS.PHOTO_LIBRARY] == RESULTS.BLOCKED ){
+					await openSettings().catch(()=>{
+						console.warn('cannot open settings')
+					})
+					console.log('-- openSettings finish')
+				}
+			}
+		);
+	}
+
+
 	onLoad( syntheticEvent ) {
 		var {nativeEvent} = syntheticEvent;
 		console.log('-- url : ', nativeEvent.url)
@@ -128,7 +188,7 @@ export default class MainScreen extends Component {
 
 	onMessage( event ) {
 		console.log('-- onMessage event : ', event, event.nativeEvent);
-  
+
 		if( !event.nativeEvent || !event.nativeEvent.data || event.nativeEvent.data == "undefined" ) {
 		console.log('-- nativeEvent is not valid');
 		return;
@@ -183,6 +243,18 @@ export default class MainScreen extends Component {
 							spinner: data.data.visible
 						})
 					}					
+					break;
+				case 'audio_record_start':					
+					this.audioRecordStart(data.data)
+					break;
+				case 'audio_record_stop':					
+					this.audioRecordStop(data.data)
+					break;
+				case 'audio_play_start':					
+					this.audioPlayStart(data.data)
+					break;
+				case 'audio_play_stop':					
+					this.audioPlayStop(data.data)
 					break;
 				default:
 					break;
@@ -248,7 +320,7 @@ export default class MainScreen extends Component {
 					prepayId: data.prepayid,
 					nonceStr: data.noncestr,
 					timeStamp: data.timestamp,
-                    package: '',
+					package: '',
 					sign: data.sign
 				});
 				console.log('-- ret : ', ret);
@@ -309,8 +381,94 @@ export default class MainScreen extends Component {
 	}
 
 
+	audioRecordStart = async (data) => {
+		if( data && data.type ){
+			console.log('-- audioRecordStart');
+			const result = await audioRecorderPlayer.startRecorder();
+			audioRecorderPlayer.addRecordBackListener((e) => {
+				this.setState({
+					recordSecs: e.current_position,
+					recordTime: audioRecorderPlayer.mmssss(
+					Math.floor(e.current_position),
+					),
+				});
+				return;
+			});
+			console.log(result);
+		}		
+	};
+	
+	audioRecordStop = async (data) => {
+		if( data && data.type ){
+			console.log('-- audioRecordStop');
+			const result = await audioRecorderPlayer.stopRecorder();
+			audioRecorderPlayer.removeRecordBackListener();
+			this.setState({
+			recordSecs: 0,
+			});
+			console.log(result);
+		}
+	};
+	
+	audioPlayStart = async (data) => {
+		if( data && data.type ){
+			console.log('-- audioPlayStart');
+			const msg = await audioRecorderPlayer.startPlayer();
+			console.log(msg);
+			var that = this;
+			audioRecorderPlayer.addPlayBackListener((e) => {
+				if (e.current_position === e.duration) {
+					console.log('finished 1');			
+					audioRecorderPlayer.stopPlayer();
+	console.log('-- 1')
+					var messageType = '';
+					if( data.type == 'read' ) messageType = 'read-play-stop';
+					else if( data.type == 'qna' ) messageType = 'qna-play-stop';
+					else if( data.type == 'dubbing' ) messageType = 'dubbing-play-stop';
+
+					var jsCode = `
+						var iframe = document.getElementById('courseware_iframe').contentWindow;
+						var message = {
+							type: '${messageType}'
+						}
+						console.log('${messageType}');
+						console.log('-- iframe : ', iframe);
+						iframe.postMessage(JSON.stringify(message), '*');	
+					`;
+					console.log('-- 2 : ', jsCode)
+					console.log('-- webview : ', that.webview, that.webview.injectJavaScript)
+					that.webview.injectJavaScript(jsCode);
+					console.log('-- 3')
+				}
+				that.setState({
+					currentPositionSec: e.current_position,
+					currentDurationSec: e.duration,
+					playTime: audioRecorderPlayer.mmssss(Math.floor(e.current_position)),
+					duration: audioRecorderPlayer.mmssss(Math.floor(e.duration)),
+				});
+				return;
+			});
+		}
+	};
+	
+	audioPlayPause = async (data) => {
+		if( data && data.type ){
+			await audioRecorderPlayer.pausePlayer();
+		}
+	};
+	
+	audioPlayStop = async (data) => {
+		if( data && data.type ){
+			console.log('-- audioPlayStop');
+			audioRecorderPlayer.stopPlayer();
+			audioRecorderPlayer.removePlayBackListener();
+		}
+	};
+
+
 	render() {
 		var { spinner, loadingText } = this.state;
+
 		return (
 			<View style={{flex: 1}}>
 				<Spinner
@@ -319,7 +477,8 @@ export default class MainScreen extends Component {
 					textStyle={styles.spinnerTextStyle}
 					// size={'normal'}
 				/>
-				<WebView
+				<WebView	
+					ref={webview => this.webview = webview}				
 					source={{
 						uri: REQUEST_URL,
 					}}
@@ -330,12 +489,13 @@ export default class MainScreen extends Component {
 					onError={syntheticEvent => {this.onError(syntheticEvent)}}
 					onLoadProgress={({ nativeEvent }) => {
 						console.log('-- loadProgress : ', nativeEvent.progress);
-					  }}
+					}}
 					onHttpError={syntheticEvent => {this.onHttpError(syntheticEvent)}}
 					onMessage={event => {this.onMessage(event)}}
+					allowsInlineMediaPlayback={true}
 					style={{
 						flex: 1,
-					}}				
+					}}
 				/>
 			</View>
 		);
@@ -344,7 +504,7 @@ export default class MainScreen extends Component {
 
 const styles = StyleSheet.create({
 	spinnerTextStyle: {
-	  color: '#FFF',
-	  fontSize: 14
+	color: '#FFF',
+	fontSize: 14
 	},
-  });
+});

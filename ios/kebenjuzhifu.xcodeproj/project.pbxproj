@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* kebenjuzhifuzhifuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* kebenjuzhifuzhifuTests.m */; };
+		00E356F31AD99517003FC87E /* kebenjuzhifuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* kebenjuzhifuTests.m */; };
+		077A3006B98C90522CA5BC04 /* libPods-kebenjuzhifu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F044A4650A60FDBCA97940BE /* libPods-kebenjuzhifu.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2A416A35ED73CF053BC1B4F5 /* libPods-kebenjuzhifu-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 267CEC7D91046368BB944223 /* libPods-kebenjuzhifu-tvOS.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* kebenjuzhifuzhifuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* kebenjuzhifuzhifuTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* kebenjuzhifuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* kebenjuzhifuTests.m */; };
+		AE6D125924814C0B0057C06F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6D125824814C0A0057C06F /* SystemConfiguration.framework */; };
+		AE6D125B24814C1A0057C06F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6D125A24814C1A0057C06F /* CoreTelephony.framework */; };
+		AE6D125D24814C2C0057C06F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6D125C24814C2C0057C06F /* libsqlite3.0.tbd */; };
+		AE6D125F24814C3C0057C06F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6D125E24814C3C0057C06F /* libc++.tbd */; };
+		AE6D126124814C470057C06F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6D126024814C470057C06F /* libz.tbd */; };
+		C2F43D9F8BAC0DFE045A5945 /* libPods-kebenjuzhifu-kebenjuzhifuTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B73966037D0D6FA8ADE8A4AB /* libPods-kebenjuzhifu-kebenjuzhifuTests.a */; };
+		CD085C990D3ECAF6B0E6F415 /* libPods-kebenjuzhifu-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25001AB29958028E67F05635 /* libPods-kebenjuzhifu-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,33 +33,50 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = kebenjuzhifuzhifu;
+			remoteInfo = kebenjuzhifu;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "kebenjuzhifuzhifu-tvOS";
+			remoteInfo = "kebenjuzhifu-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* kebenjuzhifuzhifuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kebenjuzhifuzhifuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* kebenjuzhifuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kebenjuzhifuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* kebenjuzhifuzhifuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kebenjuzhifuzhifuTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* kebenjuzhifuzhifu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kebenjuzhifuzhifu.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = kebenjuzhifuzhifu/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = kebenjuzhifuzhifu/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* kebenjuzhifuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kebenjuzhifuTests.m; sourceTree = "<group>"; };
+		05D75DC308BDC37F9D03EFCE /* Pods-kebenjuzhifu-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kebenjuzhifu-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-kebenjuzhifu-tvOS/Pods-kebenjuzhifu-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* kebenjuzhifu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kebenjuzhifu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = kebenjuzhifu/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = kebenjuzhifu/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = kebenjuzhifuzhifu/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = kebenjuzhifuzhifu/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = kebenjuzhifuzhifu/main.m; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* kebenjuzhifuzhifu-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kebenjuzhifuzhifu-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* kebenjuzhifuzhifu-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kebenjuzhifuzhifu-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = kebenjuzhifu/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = kebenjuzhifu/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = kebenjuzhifu/main.m; sourceTree = "<group>"; };
+		25001AB29958028E67F05635 /* libPods-kebenjuzhifu-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-kebenjuzhifu-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26793BD990AAD7FEBB1B386B /* Pods-kebenjuzhifu-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kebenjuzhifu-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-kebenjuzhifu-tvOSTests/Pods-kebenjuzhifu-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		267CEC7D91046368BB944223 /* libPods-kebenjuzhifu-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-kebenjuzhifu-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* kebenjuzhifu-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kebenjuzhifu-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* kebenjuzhifu-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kebenjuzhifu-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5287A73AA1998DE81F1CD77D /* Pods-kebenjuzhifu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kebenjuzhifu.debug.xcconfig"; path = "Target Support Files/Pods-kebenjuzhifu/Pods-kebenjuzhifu.debug.xcconfig"; sourceTree = "<group>"; };
+		943E47EDC19DF77EC7441E1C /* Pods-kebenjuzhifu-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kebenjuzhifu-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-kebenjuzhifu-tvOSTests/Pods-kebenjuzhifu-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE6D125824814C0A0057C06F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AE6D125A24814C1A0057C06F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		AE6D125C24814C2C0057C06F /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		AE6D125E24814C3C0057C06F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		AE6D126024814C470057C06F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B73966037D0D6FA8ADE8A4AB /* libPods-kebenjuzhifu-kebenjuzhifuTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-kebenjuzhifu-kebenjuzhifuTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9E65566746BF768246F4D43 /* Pods-kebenjuzhifu-kebenjuzhifuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kebenjuzhifu-kebenjuzhifuTests.debug.xcconfig"; path = "Target Support Files/Pods-kebenjuzhifu-kebenjuzhifuTests/Pods-kebenjuzhifu-kebenjuzhifuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF307F6A6D55B0ABB3EDABC7 /* Pods-kebenjuzhifu-kebenjuzhifuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kebenjuzhifu-kebenjuzhifuTests.release.xcconfig"; path = "Target Support Files/Pods-kebenjuzhifu-kebenjuzhifuTests/Pods-kebenjuzhifu-kebenjuzhifuTests.release.xcconfig"; sourceTree = "<group>"; };
+		E549396051C2B616C2102A9F /* Pods-kebenjuzhifu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kebenjuzhifu.release.xcconfig"; path = "Target Support Files/Pods-kebenjuzhifu/Pods-kebenjuzhifu.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		F044A4650A60FDBCA97940BE /* libPods-kebenjuzhifu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-kebenjuzhifu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB66F4B218CEFAD212803C72 /* Pods-kebenjuzhifu-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kebenjuzhifu-tvOS.release.xcconfig"; path = "Target Support Files/Pods-kebenjuzhifu-tvOS/Pods-kebenjuzhifu-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F43D9F8BAC0DFE045A5945 /* libPods-kebenjuzhifu-kebenjuzhifuTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +92,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6D126124814C470057C06F /* libz.tbd in Frameworks */,
+				AE6D125F24814C3C0057C06F /* libc++.tbd in Frameworks */,
+				AE6D125D24814C2C0057C06F /* libsqlite3.0.tbd in Frameworks */,
+				AE6D125B24814C1A0057C06F /* CoreTelephony.framework in Frameworks */,
+				AE6D125924814C0B0057C06F /* SystemConfiguration.framework in Frameworks */,
+				077A3006B98C90522CA5BC04 /* libPods-kebenjuzhifu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A416A35ED73CF053BC1B4F5 /* libPods-kebenjuzhifu-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,19 +113,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD085C990D3ECAF6B0E6F415 /* libPods-kebenjuzhifu-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* kebenjuzhifuzhifuTests */ = {
+		00E356EF1AD99517003FC87E /* kebenjuzhifuTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* kebenjuzhifuzhifuTests.m */,
+				00E356F21AD99517003FC87E /* kebenjuzhifuTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = kebenjuzhifuzhifuTests;
+			path = kebenjuzhifuTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -102,7 +137,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* kebenjuzhifuzhifu */ = {
+		13B07FAE1A68108700A75B9A /* kebenjuzhifu */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -113,16 +148,40 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = kebenjuzhifuzhifu;
+			name = kebenjuzhifu;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE6D126024814C470057C06F /* libz.tbd */,
+				AE6D125E24814C3C0057C06F /* libc++.tbd */,
+				AE6D125C24814C2C0057C06F /* libsqlite3.0.tbd */,
+				AE6D125A24814C1A0057C06F /* CoreTelephony.framework */,
+				AE6D125824814C0A0057C06F /* SystemConfiguration.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
+				F044A4650A60FDBCA97940BE /* libPods-kebenjuzhifu.a */,
+				B73966037D0D6FA8ADE8A4AB /* libPods-kebenjuzhifu-kebenjuzhifuTests.a */,
+				267CEC7D91046368BB944223 /* libPods-kebenjuzhifu-tvOS.a */,
+				25001AB29958028E67F05635 /* libPods-kebenjuzhifu-tvOSTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5EE43BFD7A7B6DB774E8D3E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5287A73AA1998DE81F1CD77D /* Pods-kebenjuzhifu.debug.xcconfig */,
+				E549396051C2B616C2102A9F /* Pods-kebenjuzhifu.release.xcconfig */,
+				B9E65566746BF768246F4D43 /* Pods-kebenjuzhifu-kebenjuzhifuTests.debug.xcconfig */,
+				BF307F6A6D55B0ABB3EDABC7 /* Pods-kebenjuzhifu-kebenjuzhifuTests.release.xcconfig */,
+				05D75DC308BDC37F9D03EFCE /* Pods-kebenjuzhifu-tvOS.debug.xcconfig */,
+				FB66F4B218CEFAD212803C72 /* Pods-kebenjuzhifu-tvOS.release.xcconfig */,
+				943E47EDC19DF77EC7441E1C /* Pods-kebenjuzhifu-tvOSTests.debug.xcconfig */,
+				26793BD990AAD7FEBB1B386B /* Pods-kebenjuzhifu-tvOSTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -135,11 +194,12 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* kebenjuzhifuzhifu */,
+				13B07FAE1A68108700A75B9A /* kebenjuzhifu */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* kebenjuzhifuzhifuTests */,
+				00E356EF1AD99517003FC87E /* kebenjuzhifuTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				5EE43BFD7A7B6DB774E8D3E5 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -149,10 +209,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* kebenjuzhifuzhifu.app */,
-				00E356EE1AD99517003FC87E /* kebenjuzhifuzhifuTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* kebenjuzhifuzhifu-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* kebenjuzhifuzhifu-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* kebenjuzhifu.app */,
+				00E356EE1AD99517003FC87E /* kebenjuzhifuTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* kebenjuzhifu-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* kebenjuzhifu-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,10 +220,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* kebenjuzhifuzhifuTests */ = {
+		00E356ED1AD99517003FC87E /* kebenjuzhifuTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "kebenjuzhifuzhifuTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "kebenjuzhifuTests" */;
 			buildPhases = (
+				186267D8CC032690B633D058 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -173,15 +234,16 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = kebenjuzhifuzhifuTests;
-			productName = kebenjuzhifuzhifuTests;
-			productReference = 00E356EE1AD99517003FC87E /* kebenjuzhifuzhifuTests.xctest */;
+			name = kebenjuzhifuTests;
+			productName = kebenjuzhifuTests;
+			productReference = 00E356EE1AD99517003FC87E /* kebenjuzhifuTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* kebenjuzhifuzhifu */ = {
+		13B07F861A680F5B00A75B9A /* kebenjuzhifu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "kebenjuzhifuzhifu" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "kebenjuzhifu" */;
 			buildPhases = (
+				29BE80653678D2F723E71EC3 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -192,15 +254,16 @@
 			);
 			dependencies = (
 			);
-			name = kebenjuzhifuzhifu;
-			productName = kebenjuzhifuzhifu;
-			productReference = 13B07F961A680F5B00A75B9A /* kebenjuzhifuzhifu.app */;
+			name = kebenjuzhifu;
+			productName = kebenjuzhifu;
+			productReference = 13B07F961A680F5B00A75B9A /* kebenjuzhifu.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* kebenjuzhifuzhifu-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* kebenjuzhifu-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "kebenjuzhifuzhifu-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "kebenjuzhifu-tvOS" */;
 			buildPhases = (
+				B3BD42E34F161DFFDC827BE3 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -211,15 +274,16 @@
 			);
 			dependencies = (
 			);
-			name = "kebenjuzhifuzhifu-tvOS";
-			productName = "kebenjuzhifuzhifu-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* kebenjuzhifuzhifu-tvOS.app */;
+			name = "kebenjuzhifu-tvOS";
+			productName = "kebenjuzhifu-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* kebenjuzhifu-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* kebenjuzhifuzhifu-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* kebenjuzhifu-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "kebenjuzhifuzhifu-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "kebenjuzhifu-tvOSTests" */;
 			buildPhases = (
+				228BD286724A50B2CF06B1C2 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -229,9 +293,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "kebenjuzhifuzhifu-tvOSTests";
-			productName = "kebenjuzhifuzhifu-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* kebenjuzhifuzhifu-tvOSTests.xctest */;
+			name = "kebenjuzhifu-tvOSTests";
+			productName = "kebenjuzhifu-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* kebenjuzhifu-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -247,6 +311,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 3DMUWD6SPU;
 						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -260,7 +325,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "kebenjuzhifuzhifu" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "kebenjuzhifu" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -273,10 +338,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* kebenjuzhifuzhifu */,
-				00E356ED1AD99517003FC87E /* kebenjuzhifuzhifuTests */,
-				2D02E47A1E0B4A5D006451C7 /* kebenjuzhifuzhifu-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* kebenjuzhifuzhifu-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* kebenjuzhifu */,
+				00E356ED1AD99517003FC87E /* kebenjuzhifuTests */,
+				2D02E47A1E0B4A5D006451C7 /* kebenjuzhifu-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* kebenjuzhifu-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -330,6 +395,72 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		186267D8CC032690B633D058 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kebenjuzhifu-kebenjuzhifuTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		228BD286724A50B2CF06B1C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kebenjuzhifu-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29BE80653678D2F723E71EC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kebenjuzhifu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,6 +474,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		B3BD42E34F161DFFDC827BE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kebenjuzhifu-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -389,7 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* kebenjuzhifuzhifuTests.m in Sources */,
+				00E356F31AD99517003FC87E /* kebenjuzhifuTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* kebenjuzhifuzhifuTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* kebenjuzhifuTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,12 +577,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* kebenjuzhifuzhifu */;
+			target = 13B07F861A680F5B00A75B9A /* kebenjuzhifu */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* kebenjuzhifuzhifu-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* kebenjuzhifu-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -441,7 +594,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = kebenjuzhifuzhifu;
+			path = kebenjuzhifu;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -449,13 +602,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9E65566746BF768246F4D43 /* Pods-kebenjuzhifu-kebenjuzhifuTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = kebenjuzhifuzhifuTests/Info.plist;
+				INFOPLIST_FILE = kebenjuzhifuTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -465,16 +619,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kebenjuzhifuzhifu.app/kebenjuzhifuzhifu";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kebenjuzhifu.app/kebenjuzhifu";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF307F6A6D55B0ABB3EDABC7 /* Pods-kebenjuzhifu-kebenjuzhifuTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = kebenjuzhifuzhifuTests/Info.plist;
+				INFOPLIST_FILE = kebenjuzhifuTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -484,30 +639,32 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kebenjuzhifuzhifu.app/kebenjuzhifuzhifu";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kebenjuzhifu.app/kebenjuzhifu";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5287A73AA1998DE81F1CD77D /* Pods-kebenjuzhifu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3DMUWD6SPU;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"FB_SONARKIT_ENABLED=1",
 				);
-				INFOPLIST_FILE = kebenjuzhifuzhifu/Info.plist;
+				INFOPLIST_FILE = kebenjuzhifu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = kebenjuzhifuzhifu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulalaedu.kebenjuzhifu;
+				PRODUCT_NAME = kebenjuzhifu;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -516,19 +673,21 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E549396051C2B616C2102A9F /* Pods-kebenjuzhifu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = kebenjuzhifuzhifu/Info.plist;
+				DEVELOPMENT_TEAM = 3DMUWD6SPU;
+				INFOPLIST_FILE = kebenjuzhifu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = kebenjuzhifuzhifu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hulalaedu.kebenjuzhifu;
+				PRODUCT_NAME = kebenjuzhifu;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -536,6 +695,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05D75DC308BDC37F9D03EFCE /* Pods-kebenjuzhifu-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -546,14 +706,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "kebenjuzhifuzhifu-tvOS/Info.plist";
+				INFOPLIST_FILE = "kebenjuzhifu-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.kebenjuzhifuzhifu-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.kebenjuzhifu-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -563,6 +723,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB66F4B218CEFAD212803C72 /* Pods-kebenjuzhifu-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -573,14 +734,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "kebenjuzhifuzhifu-tvOS/Info.plist";
+				INFOPLIST_FILE = "kebenjuzhifu-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.kebenjuzhifuzhifu-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.kebenjuzhifu-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -590,6 +751,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 943E47EDC19DF77EC7441E1C /* Pods-kebenjuzhifu-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -599,23 +761,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "kebenjuzhifuzhifu-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "kebenjuzhifu-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.kebenjuzhifuzhifu-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.kebenjuzhifu-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kebenjuzhifuzhifu-tvOS.app/kebenjuzhifuzhifu-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kebenjuzhifu-tvOS.app/kebenjuzhifu-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26793BD990AAD7FEBB1B386B /* Pods-kebenjuzhifu-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -625,17 +788,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "kebenjuzhifuzhifu-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "kebenjuzhifu-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.kebenjuzhifuzhifu-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.kebenjuzhifu-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kebenjuzhifuzhifu-tvOS.app/kebenjuzhifuzhifu-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kebenjuzhifu-tvOS.app/kebenjuzhifu-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -756,7 +919,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "kebenjuzhifuzhifuTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "kebenjuzhifuTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -765,7 +928,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "kebenjuzhifuzhifu" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "kebenjuzhifu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -774,7 +937,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "kebenjuzhifuzhifu-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "kebenjuzhifu-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -783,7 +946,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "kebenjuzhifuzhifu-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "kebenjuzhifu-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -792,7 +955,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "kebenjuzhifuzhifu" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "kebenjuzhifu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
