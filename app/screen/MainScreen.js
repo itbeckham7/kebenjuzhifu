@@ -26,6 +26,8 @@ import * as WeChat from 'react-native-wechat';//首先导入react-native-wechat
 import axios from 'axios';
 import RNFetchBlob from 'rn-fetch-blob'
 import Spinner from 'react-native-loading-spinner-overlay';
+import RNFileSelector from 'react-native-file-selector';
+import DocumentPicker from 'react-native-document-picker';
 import AudioRecorderPlayer from 'react-native-audio-recorder-player';
 const audioRecorderPlayer = new AudioRecorderPlayer();
 
@@ -38,24 +40,29 @@ const WECHAT_APPID = 'wxb7532c0995b93389';
 const WECHAT_APPSECRET = '68778f76077595d000faa01672970fbd';
 
 export default class MainScreen extends Component {
-constructor(props) {
-	super(props);
-	this.state = {
-		spinner: false,
-		loadingText: 'Loading...'
-	};
-	
-	this.onMessage = this.onMessage.bind(this);
-	this.weixinLogin = this.weixinLogin.bind(this);
-	this.weixinPayment = this.weixinPayment.bind(this);
-	this.showReferencePdf = this.showReferencePdf.bind(this);
-	this.downloadFileFromUrl = this.downloadFileFromUrl.bind(this);
-	this.audioRecordStart = this.audioRecordStart.bind(this);
-	this.audioRecordStop = this.audioRecordStop.bind(this);
-	this.audioPlayStart = this.audioPlayStart.bind(this);
-	this.audioPlayPause = this.audioPlayPause.bind(this);
-	this.audioPlayStop = this.audioPlayStop.bind(this);
-}
+
+	dubbingInfo = [];
+
+	constructor(props) {
+		super(props);
+		this.state = {
+			spinner: false,
+			loadingText: 'Loading...'
+		};
+		
+		this.onMessage = this.onMessage.bind(this);
+		this.weixinLogin = this.weixinLogin.bind(this);
+		this.weixinPayment = this.weixinPayment.bind(this);
+		this.showReferencePdf = this.showReferencePdf.bind(this);
+		this.downloadFileFromUrl = this.downloadFileFromUrl.bind(this);
+		this.audioRecordStart = this.audioRecordStart.bind(this);
+		this.audioRecordStop = this.audioRecordStop.bind(this);
+		this.audioPlayStart = this.audioPlayStart.bind(this);
+		this.audioPlayPause = this.audioPlayPause.bind(this);
+		this.audioPlayStop = this.audioPlayStop.bind(this);
+		this.saveDubbingRead = this.saveDubbingRead.bind(this);
+		this.uploadShootingFile = this.uploadShootingFile.bind(this);
+	}
 
 	async componentDidMount() {
 		Orientation.lockToLandscape();
@@ -67,6 +74,7 @@ constructor(props) {
 		
 		var regStatus = await WeChat.registerApp(WECHAT_APPID);
 		console.log('-- regStatus : ', regStatus);
+		console.log('-- document dir : ', RNFetchBlob.fs.dirs.DocumentDir);
 	}
 
 
@@ -255,6 +263,15 @@ constructor(props) {
 					break;
 				case 'audio_play_stop':					
 					this.audioPlayStop(data.data)
+					break;
+				case 'append_dubbing_read':					
+					this.appendDubbingRead(data.data)
+					break;
+				case 'save_dubbing_read':					
+					this.saveDubbingRead(data.data)
+					break;
+				case 'upload_shooting_file':					
+					this.uploadShootingFile(data.data)
 					break;
 				default:
 					break;
@@ -465,6 +482,125 @@ constructor(props) {
 		}
 	};
 
+	appendDubbingRead(data) {
+		if( data.info == undefined ) return;
+		if( data.start == true ) {
+			this.dubbingInfo = [];
+			this.dubbingReadBlub = [];
+		}
+
+		this.dubbingInfo.push(data.info)
+		this.dubbingReadBlub.push({
+
+		})
+	}
+
+	saveDubbingRead(data) {
+		if( data.coursewareId == undefined ) return;
+		
+		var url = REQUEST_URL + 'middle/contents/upload';
+		var postData = [
+			{ name : 'file', data : data.fileName},
+			{ name : 'new_filename', data : data.fileName},
+			{ name : 'coursewareId', data : ''+data.coursewareId},
+			{ name : 'type', data : data.type},
+			{ name : 'read-bg-video', data : data.readBgVideo},
+		];
+
+		for( var i=0; this.dubbingReadBlub.length; i++ ){
+			postData.push({ name : 'read-blob[]', filename : data.fileName, data: RNFetchBlob.wrap(this.dubbingReadBlub[i])})
+			postData.push({ name : 'info[]', data: this.dubbingInfo[i]});
+		}
+
+		RNFetchBlob.fetch('POST', url, {
+			'Content-Type' : 'multipart/form-data',
+		}, postData).then((resp) => {
+			this.setState({
+				loadingText: '',
+				spinner: false
+			})
+			console.log('-- resp : ', resp);
+
+			if( resp.data != '' ){
+				Alert.alert("上传失败了。");
+			} else {
+				Alert.alert("上传成功了。");
+			}
+			return;
+		}).catch((err) => {
+			this.setState({
+				loadingText: '',
+				spinner: false
+			})
+			console.log('-- err : ', err)
+		})
+	}
+
+
+	async uploadShootingFile(data) {
+		if( data.coursewareId == undefined ) return;
+		
+		RNFileSelector.Show(
+			{
+				title: '选择文件',
+				onDone: (path) => {
+					console.log('-- file path : ' + path)
+					var fileName = path.split('/');
+					fileName = fileName[fileName.length-1];					
+					console.log('-- fileName : ', fileName);
+
+					var fileExt = fileName.split('.');
+					var newFileName = fileName.replace('.'+fileExt[fileExt.length-1], '');
+					fileExt = fileExt[fileExt.length-1];
+					
+					console.log('-- fileExt : ', fileExt, newFileName);
+					if( fileExt != 'mp4' && fileExt != 'mov' ){
+						Alert.alert("上传失败了。请选择视频文件。")
+						return;
+					}
+
+					this.setState({
+						loadingText: '',
+						spinner: true
+					})
+
+					var url = REQUEST_URL + 'middle/contents/upload';
+					RNFetchBlob.fetch('POST', url, {
+						'Content-Type' : 'multipart/form-data',
+					}, [
+						{ name : 'file', filename : fileName, data: RNFetchBlob.wrap(path)},
+						// elements without property `filename` will be sent as plain text
+						{ name : 'upload_file', data : 'true'},
+						{ name : 'type', data : 'shooting'},
+						{ name : 'coursewareId', data : ''+data.coursewareId},
+						{ name : 'new_filename', data : newFileName},
+					]).then((resp) => {
+						this.setState({
+							loadingText: '',
+							spinner: false
+						})
+						console.log('-- resp : ', resp);
+
+						if( resp.data != '' ){
+							Alert.alert("上传失败了。");
+						} else {
+							Alert.alert("上传成功了。");
+						}
+						return;
+					}).catch((err) => {
+						this.setState({
+							loadingText: '',
+							spinner: false
+						})
+						console.log('-- err : ', err)
+					})
+				},
+				onCancel: () => {
+					console.log('-- cancelled')
+				}
+			}
+		)
+	}
 
 	render() {
 		var { spinner, loadingText } = this.state;
@@ -493,6 +629,7 @@ constructor(props) {
 					onHttpError={syntheticEvent => {this.onHttpError(syntheticEvent)}}
 					onMessage={event => {this.onMessage(event)}}
 					allowsInlineMediaPlayback={true}
+					mediaPlaybackRequiresUserAction={false} 
 					style={{
 						flex: 1,
 					}}
