@@ -4418,9 +4418,9 @@ lodash.throttle@^4.1.1:
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
 lodash@^4.17.10, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.3.0:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 log-symbols@^2.2.0:
   version "2.2.0"
@@ -5539,6 +5539,16 @@ react-native-audio-recorder-player@^2.5.1:
   integrity sha512-qXE7/LLPdgoDNd88yv+uqmkBj8EOQa/yU2CUYCtC5bfeNQPiH1cVEbxfxGY+0hUawtd5uR2XxKM+Y5tUJOGzMQ==
   dependencies:
     dooboolab-welcome "^1.1.1"
+
+react-native-document-picker@^3.4.0:
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/react-native-document-picker/-/react-native-document-picker-3.5.3.tgz#f749d329b8a85a4a599253dafe8c5c1c0602388b"
+  integrity sha512-y1H7LKa8+VTtaBo46HNEz62IbRh6E4YMgdKi4+UFp33OTddzk0JAwcDT//vWI6tvB+u4B1AsamTdbI86FYeQAQ==
+
+react-native-file-selector@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-file-selector/-/react-native-file-selector-1.0.0.tgz#d889fb633a2f84fbad8ebf263c8b60a100993542"
+  integrity sha512-z3pU6gCSt6jPWe9V1hCjhFEVbqpQ7h7w/Y3XhnDjcN+BCRm2fv5YIRKX1l/Umk1SE4jmSumU5qoYhptagAnyCQ==
 
 react-native-fs@^2.16.6:
   version "2.16.6"
