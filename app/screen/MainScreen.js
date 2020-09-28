@@ -337,7 +337,7 @@ export default class MainScreen extends Component {
 					prepayId: data.prepayid,
 					nonceStr: data.noncestr,
 					timeStamp: data.timestamp,
-					package: '',
+					package: data.package,
 					sign: data.sign
 				});
 				console.log('-- ret : ', ret);
